@@ -11,8 +11,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MarketParsApp.Migrations
 {
     [DbContext(typeof(DataBaseContext))]
-    [Migration("20230803130738_m1")]
-    partial class m1
+    [Migration("20230810041832_m2")]
+    partial class m2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,10 +32,6 @@ namespace MarketParsApp.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Color")
-                        .IsRequired()
-                        .HasColumnType("text");
-
                     b.Property<string>("Frequency")
                         .IsRequired()
                         .HasColumnType("text");
@@ -52,9 +48,6 @@ namespace MarketParsApp.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("Mass")
-                        .HasColumnType("integer");
-
                     b.Property<string>("Model")
                         .IsRequired()
                         .HasColumnType("text");
@@ -62,8 +55,8 @@ namespace MarketParsApp.Migrations
                     b.Property<int>("Power")
                         .HasColumnType("integer");
 
-                    b.Property<decimal>("Price")
-                        .HasColumnType("numeric");
+                    b.Property<int>("Price")
+                        .HasColumnType("integer");
 
                     b.Property<string>("Vram")
                         .IsRequired()
@@ -101,21 +94,14 @@ namespace MarketParsApp.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("Mass")
-                        .HasColumnType("integer");
-
                     b.Property<string>("Model")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<decimal>("Price")
-                        .HasColumnType("numeric");
+                    b.Property<int>("Price")
+                        .HasColumnType("integer");
 
                     b.Property<string>("ReadSpeed")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Size")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -140,6 +126,10 @@ namespace MarketParsApp.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<string>("Chipset")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<int>("DdrSum")
                         .HasColumnType("integer");
 
@@ -155,19 +145,12 @@ namespace MarketParsApp.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("Mass")
-                        .HasColumnType("integer");
-
                     b.Property<string>("Model")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<decimal>("Price")
-                        .HasColumnType("numeric");
-
-                    b.Property<string>("Size")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.Property<int>("Price")
+                        .HasColumnType("integer");
 
                     b.Property<string>("Socket")
                         .IsRequired()
@@ -213,8 +196,8 @@ namespace MarketParsApp.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<decimal>("Price")
-                        .HasColumnType("numeric");
+                    b.Property<int>("Price")
+                        .HasColumnType("integer");
 
                     b.HasKey("Id");
 
@@ -241,27 +224,17 @@ namespace MarketParsApp.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("Mass")
-                        .HasColumnType("integer");
-
                     b.Property<string>("Model")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("Power")
-                        .HasColumnType("integer");
-
                     b.Property<int>("PowerCapacity")
                         .HasColumnType("integer");
 
-                    b.Property<decimal>("Price")
-                        .HasColumnType("numeric");
+                    b.Property<int>("Price")
+                        .HasColumnType("integer");
 
                     b.Property<string>("PsuStandart")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Size")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -293,15 +266,12 @@ namespace MarketParsApp.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<float>("Mass")
-                        .HasColumnType("real");
-
                     b.Property<string>("Model")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<decimal>("Price")
-                        .HasColumnType("numeric");
+                    b.Property<int>("Price")
+                        .HasColumnType("integer");
 
                     b.Property<string>("Socket")
                         .IsRequired()
@@ -336,15 +306,12 @@ namespace MarketParsApp.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("Mass")
-                        .HasColumnType("integer");
-
                     b.Property<string>("Model")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<decimal>("Price")
-                        .HasColumnType("numeric");
+                    b.Property<int>("Price")
+                        .HasColumnType("integer");
 
                     b.Property<string>("Size")
                         .IsRequired()
@@ -390,9 +357,6 @@ namespace MarketParsApp.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("Mass")
-                        .HasColumnType("integer");
-
                     b.Property<int>("MemorySum")
                         .HasColumnType("integer");
 
@@ -400,11 +364,8 @@ namespace MarketParsApp.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("Power")
+                    b.Property<int>("Price")
                         .HasColumnType("integer");
-
-                    b.Property<decimal>("Price")
-                        .HasColumnType("numeric");
 
                     b.HasKey("Id");
 
@@ -434,15 +395,12 @@ namespace MarketParsApp.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("Mass")
-                        .HasColumnType("integer");
-
                     b.Property<string>("Model")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<decimal>("Price")
-                        .HasColumnType("numeric");
+                    b.Property<int>("Price")
+                        .HasColumnType("integer");
 
                     b.Property<string>("ReadSpeed")
                         .IsRequired()

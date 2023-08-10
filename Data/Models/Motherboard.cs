@@ -7,21 +7,20 @@ using AngleSharp.Dom;
 
 namespace MarketParsApp.Data.Models
 {
-    internal class Motherboard : ParsePattern
+    internal class Motherboard 
     {
-
-        public Motherboard(IDocument doc) : base()
-        {
-            base.doc = doc;
-        }
-
-        public static IDocument doc { get;  set; }
         public int Id { get; set; }
+        public string Manufacture { get; set; }
+        public string Model { get; set; }
+        public string Chipset { get; set; }
         public string BoardFormat { get; set; } = string.Empty;
         public string DdrType { get; set; } = string.Empty;
         public int DdrSum { get; set; }
         public string Socket { get; set; } = string.Empty;
-        public string Size { get; set; } = string.Empty;
-        
+        //public string Size { get; set; } = string.Empty;
+        public int Price { get; set; }
+        public string Image { get; set; }
+
+ 
     }
 }

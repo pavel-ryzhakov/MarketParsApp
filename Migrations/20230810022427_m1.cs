@@ -6,7 +6,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MarketParsApp.Migrations
 {
     /// <inheritdoc />
-    public partial class m2 : Migration
+    public partial class m1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -24,9 +24,7 @@ namespace MarketParsApp.Migrations
                     VramType = table.Column<string>(type: "text", nullable: false),
                     Frequency = table.Column<string>(type: "text", nullable: false),
                     Power = table.Column<int>(type: "integer", nullable: false),
-                    Color = table.Column<string>(type: "text", nullable: false),
-                    Mass = table.Column<int>(type: "integer", nullable: false),
-                    Price = table.Column<decimal>(type: "numeric", nullable: false),
+                    Price = table.Column<int>(type: "integer", nullable: false),
                     Image = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
@@ -46,9 +44,7 @@ namespace MarketParsApp.Migrations
                     ReadSpeed = table.Column<string>(type: "text", nullable: false),
                     WriteSpeed = table.Column<string>(type: "text", nullable: false),
                     Format = table.Column<string>(type: "text", nullable: false),
-                    Size = table.Column<string>(type: "text", nullable: false),
-                    Mass = table.Column<int>(type: "integer", nullable: false),
-                    Price = table.Column<decimal>(type: "numeric", nullable: false),
+                    Price = table.Column<int>(type: "integer", nullable: false),
                     Image = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
@@ -64,13 +60,12 @@ namespace MarketParsApp.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Manufacture = table.Column<string>(type: "text", nullable: false),
                     Model = table.Column<string>(type: "text", nullable: false),
+                    Chipset = table.Column<string>(type: "text", nullable: false),
                     BoardFormat = table.Column<string>(type: "text", nullable: false),
                     DdrType = table.Column<string>(type: "text", nullable: false),
                     DdrSum = table.Column<int>(type: "integer", nullable: false),
                     Socket = table.Column<string>(type: "text", nullable: false),
-                    Size = table.Column<string>(type: "text", nullable: false),
-                    Mass = table.Column<int>(type: "integer", nullable: false),
-                    Price = table.Column<decimal>(type: "numeric", nullable: false),
+                    Price = table.Column<int>(type: "integer", nullable: false),
                     Image = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
@@ -90,7 +85,7 @@ namespace MarketParsApp.Migrations
                     BoardFormat = table.Column<string>(type: "text", nullable: false),
                     Color = table.Column<string>(type: "text", nullable: false),
                     Mass = table.Column<int>(type: "integer", nullable: false),
-                    Price = table.Column<decimal>(type: "numeric", nullable: false),
+                    Price = table.Column<int>(type: "integer", nullable: false),
                     Image = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
@@ -111,8 +106,7 @@ namespace MarketParsApp.Migrations
                     PsuStandart = table.Column<string>(type: "text", nullable: false),
                     Power = table.Column<int>(type: "integer", nullable: false),
                     Size = table.Column<string>(type: "text", nullable: false),
-                    Mass = table.Column<int>(type: "integer", nullable: false),
-                    Price = table.Column<decimal>(type: "numeric", nullable: false),
+                    Price = table.Column<int>(type: "integer", nullable: false),
                     Image = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
@@ -132,8 +126,7 @@ namespace MarketParsApp.Migrations
                     Airflow = table.Column<string>(type: "text", nullable: false),
                     Speed = table.Column<string>(type: "text", nullable: false),
                     Size = table.Column<string>(type: "text", nullable: false),
-                    Mass = table.Column<int>(type: "integer", nullable: false),
-                    Price = table.Column<decimal>(type: "numeric", nullable: false),
+                    Price = table.Column<int>(type: "integer", nullable: false),
                     Image = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
@@ -153,8 +146,7 @@ namespace MarketParsApp.Migrations
                     Frequency = table.Column<string>(type: "text", nullable: false),
                     Threads = table.Column<string>(type: "text", nullable: false),
                     Socket = table.Column<string>(type: "text", nullable: false),
-                    Mass = table.Column<float>(type: "real", nullable: false),
-                    Price = table.Column<decimal>(type: "numeric", nullable: false),
+                    Price = table.Column<int>(type: "integer", nullable: false),
                     Image = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
@@ -174,10 +166,8 @@ namespace MarketParsApp.Migrations
                     DdrSum = table.Column<int>(type: "integer", nullable: false),
                     MemorySum = table.Column<int>(type: "integer", nullable: false),
                     Frequency = table.Column<string>(type: "text", nullable: false),
-                    Power = table.Column<int>(type: "integer", nullable: false),
-                    Mass = table.Column<int>(type: "integer", nullable: false),
-                    Price = table.Column<decimal>(type: "numeric", nullable: false),
-                    ImageI = table.Column<string>(type: "text", nullable: false)
+                    Price = table.Column<int>(type: "integer", nullable: false),
+                    Image = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -196,8 +186,7 @@ namespace MarketParsApp.Migrations
                     ReadSpeed = table.Column<string>(type: "text", nullable: false),
                     WriteSpeed = table.Column<string>(type: "text", nullable: false),
                     Format = table.Column<string>(type: "text", nullable: false),
-                    Mass = table.Column<int>(type: "integer", nullable: false),
-                    Price = table.Column<decimal>(type: "numeric", nullable: false),
+                    Price = table.Column<int>(type: "integer", nullable: false),
                     Image = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>

@@ -7,8 +7,8 @@ namespace MarketParsApp.Data.DataBase
 
     {
         //public DataBaseContext() => Database.EnsureCreated();
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {}
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{}
         public DataBaseContext(DbContextOptions<DataBaseContext> options)
             : base(options) { }
 

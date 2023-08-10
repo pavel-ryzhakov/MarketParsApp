@@ -14,8 +14,8 @@ namespace MarketParsApp.Data.Models
         public string CaseFormat { get; set; } = string.Empty;
         public string BoardFormat { get; set; } = string.Empty;
         public string Color { get; set; } = string.Empty;
-        public int Mass { get; set; }
-        public decimal Price { get; set; }
+        public string Mass { get; set; }
+        public int Price { get; set; }
         public string Image { get; set; } = string.Empty;
     }
 }

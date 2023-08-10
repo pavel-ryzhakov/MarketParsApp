@@ -15,8 +15,10 @@ namespace MarketParsApp.Data.Models
         public string Airflow { get; set; } = string.Empty;
         public string Speed { get; set; } = string.Empty;
         public string Size { get; set; } = string.Empty;
-        public int Mass { get; set; }
-        public decimal Price { get; set; }
+        //public int Mass { get; set; }
+        public int Price { get; set; }
         public string Image { get; set; } = string.Empty;
+
+
     }
 }
